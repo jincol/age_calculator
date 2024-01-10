@@ -1,0 +1,62 @@
+@use "fuente" as f;
+@use "base/variable" as v;
+@use "base/mixins" as m;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: f.$Poppins;
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.5rem;
+  color: v.$Off_black;
+}
+
+.contenedor {
+  @include m.tablet {
+    width: 50%;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+  width: 90%;
+  border-radius: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./build/css/app.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; number-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="contenedor contenedor_cuerpo">
+    <div class="contenedor_date">
+      <div class="fechas">
+        <div class="fecha">
+          <p class="n_day">Day</p>
+          <input class="input dia" type="number" placeholder="DD">
+          <span class="invalido_disable m_day">Must be a valid day</span>
+        </div>
+        <div class="fecha">
+          <p class="n_month">Month</p>
+          <input class="input mes" type="number" placeholder="MM">
+          <span class="invalido_disable m_month">Must be a valid month</span>
+        </div>
+        <div class="fecha">
+          <p class="n_year">Year</p>
+          <input class="input anio" type="number" placeholder="YYYY">
+          <span class="invalido_disable m_year">Must be in the past</span>
+        </div>
+      </div>
+      <img class="btn" src="./assets/images/icon-arrow.svg" alt="Icono">
+    </div>
+    <div class="contenedor_result">
+      <h4><span class="date_fecha_y">--</span> years</h4>
+      <h4><span class="date_fecha_m">--</span> months</h4>
+      <h4><span class="date_fecha_d">--</span> days</h4>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/jincolchado/">Jin Colchado</a>.
+  </div>
+  <script src="./build/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@use "base/variable" as v;
+@use "base/mixins" as m;
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: v.$Light_grey;
+}
+
+.contenedor_cuerpo {
+  padding: 5rem;
+  border: thin solid blue;
+  display: flex;
+  flex-direction: column;
+  background-color: v.$White;
+}
+
+.contenedor_date {
+  border-bottom: thin solid v.$Light_grey;
+  position: relative;
+  padding-bottom: 5rem;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    background-color: v.$Purple;
+    border-radius: 50%;
+    position: absolute;
+    right: 40%;
+    bottom: -2.5rem;
+    cursor: pointer;
+    transition: .3s ease-in;
+
+    &:hover{
+      background-color: v.$Off_black;
+    }
+  }
+
+  @include m.telefono {
+    padding-bottom: 3rem;
+
+    img {
+      width: 7rem;
+      height: 7rem;
+      right: -3rem;
+      bottom: -3rem;
+    }
+  }
+}
+
+.fechas {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+
+  @include m.telefono {
+    width: 80%;
+  }
+}
+
+.fecha {
+  p {
+    margin: 0.5rem 0;
+    font-weight: 800;
+    color: v.$Smokey_grey;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  input {
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: bolder;
+    border: 1px solid v.$Light_grey;
+    border-radius: 1rem;
+
+    &::placeholder {
+      color: v.$Light_grey;
+    }
+
+    &:focus {
+      outline: 1px;
+      border-color: v.$Purple;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    @include m.telefono {
+      font-size: 2rem;
+    }
+
+    @include m.tablet {
+      border: 1px solid v.$Light_grey;
+      font-size: 3rem;
+    }
+
+  }
+
+  .invalido_disable{
+    display: none;
+  }
+
+  .txt_invalido{
+    color: v.$Light_red;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+}
