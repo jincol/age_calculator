@@ -111,7 +111,7 @@ function calcular() {
     dias = obtenerDiasDelMes(mesValue, anioValue) - (diaValue - d_dia);
   }
 
-  if (anioValue > d_año) {
+  if (anioValue > d_año || mesValue > 12 ) {
     invalido();
   } else {
     cambiar(dias, meses, años);
