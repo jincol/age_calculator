@@ -57,7 +57,7 @@ p {
 
 .contenedor {
   width: 90%;
-  border-radius: 2rem;
+  border-radius: 2rem 2rem 15rem 2rem;
 }
 @media (min-width: 768px) {
   .contenedor {
@@ -417,7 +417,6 @@ body {
 
 .contenedor_cuerpo {
   padding: 5rem;
-  border: thin solid blue;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
